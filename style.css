@@ -1,0 +1,95 @@
+:root {
+    --dark-rgb: 23 28 28;
+    --darker-rgb: 8 13 7;
+    --green: 9 252 8;
+    --theme-rgb: var(--green);
+}
+
+
+
+body{
+    background: black;
+    color: rgb(var(--theme-rgb));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1000%;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+h1 {
+    text-shadow: 0px 0px 101.0999984741211px rgb(var(--theme-rgb));
+}
+  
+
+
+#prize-lines {
+    background: linear-gradient(
+      rgb(var(--darker-rgb) / 15%) 0%,
+      rgb(var(--darker-rgb) / 75%) 28%,
+      rgb(var(--darker-rgb) / 15%) 56%,
+      rgb(var(--darker-rgb) / 5%) 56%,
+      rgb(var(--darker-rgb) / 5%) 100%
+    );
+    background-size: 100% 7px;
+    z-index: 2;
+    animation: pan-lines 360s infinite linear;
+}
+  
+  
+.prize-filter {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    pointer-events: none;
+}
+  
+@keyframes pan-lines {
+    from {
+      background-position: 0% 0%;
+    }
+    
+    to {
+      background-position: 0% -100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body{
+        font-size: 500%;
+        background: black;
+        color: rgb(var(--theme-rgb));
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        font-size: 500%;
+        background: black;
+        color: rgb(var(--theme-rgb));
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        font-size: 300%;
+    }
+}
