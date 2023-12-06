@@ -4,69 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hayır.</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-size: 5em;
-            color: white;
-            transition: background-color 0.3s;
-        }
-        div{
-            font-family: sans-serif;
-            font-weight: 700;
-        }
-
-        @media only screen and (max-width: 600px) {
-            body {
-                font-size: 4em;
-            }
-        }
-
-        @keyframes colorChange {
-            0% {
-                background-color: black;
-                color: white;
-            }
-            20% {
-                background-color: white;
-                color: black;
-            }
-            40% {
-                background-color: black;
-                color: white;
-            }
-            60% {
-                background-color: white;
-                color: black;
-            }
-            80% {
-                background-color: black;
-                color: white;
-            }
-            100% {
-                background-color: white;
-                color: black;
-            }
-            
-        }
-
-        body.changeColor {
-            animation: colorChange 0.5s infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="changeColor">
-    <div>Hayır.</div>
-
-    <script>
-        setInterval(function() {
-            document.body.classList.toggle('changeColor');
-        }, 500);
-    </script>
+<body>
+    <div id="prize">
+        <div id="prize-lines" class="prize-filter"></div>
+        <div id="prize-shadow" class="prize-filter"></div>
+        <h1 id="prize-text">Hayır.</h1>
+    </div>
 </body>
 </html>
